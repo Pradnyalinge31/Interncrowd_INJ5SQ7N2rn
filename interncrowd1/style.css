@@ -1,0 +1,147 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #4F89C5;
+	padding: 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.hero {
+	background-image: url("https://images.unsplash.com/photo-1521747116042-b20a2d4b0a31");
+	background-size: cover;
+	background-position: center;
+	height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-content {
+	background-color: rgba(255,255,255,0.8);
+	padding: 50px;
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 64px;
+	margin-bottom: 20px;
+}
+
+.hero p {
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+.hero button {
+	background-color: #4F89C5;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.about {
+	padding: 50px;
+	text-align: center;
+}
+
+.about h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+User
+CONTINUE
+ChatGPT
+.about p {
+font-size: 18px;
+margin-bottom: 40px;
+}
+
+.about a {
+background-color: #4F89C5;
+color: #fff;
+padding: 10px 20px;
+font-size: 18px;
+text-decoration: none;
+border-radius: 5px;
+}
+
+.internships {
+padding: 50px;
+text-align: center;
+}
+
+.internships h2 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.internships ul {
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-bottom: 40px;
+}
+
+.internships li {
+margin: 10px;
+}
+
+.internships a {
+background-color: #4F89C5;
+color: #fff;
+padding: 10px 20px;
+font-size: 18px;
+text-decoration: none;
+border-radius: 5px;
+}
+
+.internships button {
+background-color: #4F89C5;
+color: #fff;
+padding: 10px 20px;
+font-size: 18px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+footer {
+background-color: #4F89C5;
+padding: 20px;
+text-align: center;
+color: #fff;
+}
+
+footer p {
+font-size: 18px;
+}
+
