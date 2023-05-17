@@ -1,0 +1,119 @@
+
+
+	<!DOCTYPE html>
+<html>
+<head>
+  <title>Login / Sign Up</title>
+  <H1 style="text-align: center;">INTERNCROWD</H1>
+  <style>
+	header {
+	background-color: #4F89C5;
+	padding: 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: flex-start;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #100f0f;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="submit"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .divider {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+  <nav>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Internships</a></li>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#">Contact Us</a></li>
+	</ul>
+</nav>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form action="/login" method="post">
+      <label for="username">Username or Email:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Login">
+    </form>
+
+    <div class="divider"></div>
+
+    <h2>Sign Up</h2>
+    <form action="/signup" method="post">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+</body>
+</html>
