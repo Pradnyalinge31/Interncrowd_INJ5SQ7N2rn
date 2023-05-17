@@ -1,119 +1,50 @@
-
-
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Login / Sign Up</title>
-  <H1 style="text-align: center;">INTERNCROWD</H1>
-  <style>
-	header {
-	background-color: #4F89C5;
-	padding: 20px;
-}
-
-nav ul {
-	list-style: none;
-	display: flex;
-	justify-content: flex-start;
-}
-
-nav li {
-	margin-right: 20px;
-}
-
-nav a {
-	color: #100f0f;
-	text-decoration: none;
-	font-size: 18px;
-}
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
-
-    .container {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #fff;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    input[type="text"],
-    input[type="password"],
-    input[type="email"],
-    input[type="submit"] {
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-
-    input[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-
-    .divider {
-      margin-top: 20px;
-      border-top: 1px solid #ccc;
-    }
-  </style>
-  <nav>
-	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">Internships</a></li>
-		<li><a href="#">About Us</a></li>
-		<li><a href="#">Contact Us</a></li>
-	</ul>
-</nav>
+  <title>Intern Crowd - Find the Best Internship Opportunities</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Login</h2>
-    <form action="/login" method="post">
-      <label for="username">Username or Email:</label>
-      <input type="text" id="username" name="username" required>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Internships</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find the Best Internship Opportunities with Intern Crowd</h1>
+      <p>Join thousands of students who have found their dream internships with Intern Crowd.</p>
+      <button>Get Started</button>
+    </div>
+  </section>
 
-      <input type="submit" value="Login">
-    </form>
+  <section class="about">
+    <h2>About Intern Crowd</h2>
+    <p>Intern Crowd is a platform that connects students with top internship opportunities in their preferred fields. We work with companies across various industries to bring you the best internship options that align with your interests and skills.</p>
+    <a href="#">Learn More</a>
+  </section>
 
-    <div class="divider"></div>
+  <section class="internships">
+    <h2>Popular Internships</h2>
+    <ul>
+      <li><a href="#">Marketing Intern</a></li>
+      <li><a href="#">Software Development Intern</a></li>
+      <li><a href="#">Data Analyst Intern</a></li>
+      <li><a href="#">Graphic Design Intern</a></li>
+      <li><a href="#">Human Resources Intern</a></li>
+    </ul>
+    <button>View All Internships</button>
+  </section>
 
-    <h2>Sign Up</h2>
-    <form action="/signup" method="post">
-      <label for="fullname">Full Name:</label>
-      <input type="text" id="fullname" name="fullname" required>
+  <footer>
+    <p>&copy; 2023 Intern Crowd. All rights reserved.</p>
+  </footer>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-
-      <input type="submit" value="Sign Up">
-    </form>
-  </div>
 </body>
 </html>
