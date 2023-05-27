@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .options {
+      margin-bottom: 10px;
+    }
+
+    .result {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .result.correct {
+      color: green;
+    }
+
+    .result.incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz</h1>
+
+  <div id="quiz-container">
+    <div class="question">
+      <p>1. What is the capital of France?</p>
+      <div class="options">
+        <input type="radio" name="q1" value="a"> a. London<br>
+        <input type="radio" name="q1" value="b"> b. Paris<br>
+        <input type="radio" name="q1" value="c"> c. Rome<br>
+        <input type="radio" name="q1" value="d"> d. Madrid<br>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>2. What is the largest planet in our solar system?</p>
+      <div class="options">
+        <input type="radio" name="q2" value="a"> a. Mars<br>
+        <input type="radio" name="q2" value="b"> b. Venus<br>
+        <input type="radio" name="q2" value="c"> c. Jupiter<br>
+        <input type="radio" name="q2" value="d"> d. Saturn<br>
+      </div>
+    </div>
+
+    <button onclick="submitQuiz()">Submit</button>
+  </div>
+
+  <div id="result-container"></div>
+
+  <script>
+    function submitQuiz() {
+      var quizContainer = document.getElementById("quiz-container");
+      var resultContainer = document.getElementById("result-container");
+      var questions = quizContainer.getElementsByClassName("question");
+      var totalCorrect = 0;
+
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var radios = question.getElementsByTagName("input");
+
+        var isAnswered = false;
+        var isCorrect = false;
+
+        for (var j = 0; j < radios.length; j++) {
+          var radio = radios[j];
+          if (radio.checked) {
+            isAnswered = true;
+            if (radio.value === "b") {
+              isCorrect = true;
+            }
+            break;
+          }
+        }
+
+        if (!isAnswered) {
+          alert("Please answer all questions.");
+          return;
+        }
+
+        if (isCorrect) {
+          totalCorrect++;
+          question.style.background = "#d4edda";
+        } else {
+          question.style.background = "#f8d7da";
+        }
+      }
+
+      var resultText = "You scored " + totalCorrect + " out of " + questions.length + ".";
+      var resultClass = totalCorrect === questions.length ? "correct" : "incorrect";
+      resultContainer.innerHTML = "<p class='result " + resultClass + "'>" + resultText + "</p>";
+    }
+  </script>
+</body>
+</html>
